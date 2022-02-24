@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-
+using UnityEngine.SceneManagement;
 public class Track : MonoBehaviour
 {
 
@@ -43,6 +43,8 @@ public class Track : MonoBehaviour
                 track = audioManager.Play("song");
                 started = true;
             }
+        } else if (!audioManager.isPlaying("song")) {
+            SceneManager.LoadScene (sceneName:"Menu");
         }
     }
 
@@ -89,5 +91,5 @@ public class Track : MonoBehaviour
             
         }*/
     }
-    
+
 }

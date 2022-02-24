@@ -14,8 +14,9 @@ public class Starter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Z)) {
             SceneManager.LoadScene (sceneName:"Taiko");
-        }
+        }*/
     }
 }

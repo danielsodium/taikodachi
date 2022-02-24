@@ -34,5 +34,13 @@ public class Music : MonoBehaviour
         s.source.Play();
         return s.source;
     }
+    public bool isPlaying(string name) {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null) {
+            Debug.LogWarning("Sound \"" + name + "\"does not exist.");
+            return false;
+        }
+        return s.source.isPlaying;
+    }
 
 }

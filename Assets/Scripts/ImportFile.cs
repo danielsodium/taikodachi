@@ -8,6 +8,7 @@ using System.IO.Compression;
 public class ImportFile : MonoBehaviour
 {
 
+	public LoadMaps loader;
     private bool dialoged = false;
     private string mapsFolder;
 
@@ -58,6 +59,7 @@ public class ImportFile : MonoBehaviour
             if (!Directory.Exists(destinationPath)) {
                 ZipFile.ExtractToDirectory(FileBrowser.Result[0],destinationPath);
             }
+			loader.FindMaps();
 
             
 		} else {
