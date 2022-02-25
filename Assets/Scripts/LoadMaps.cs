@@ -19,7 +19,8 @@ public class LoadMaps : MonoBehaviour
 
     public GameObject canvas;
     public static AudioClip musicClip;
-    public static string hitsPath;
+
+    public static Dictionary<string, string> currentSongData;
 
     public List<Dictionary<string, string>> maps = new List<Dictionary<string, string>>();
     void Start() {
@@ -83,8 +84,10 @@ public class LoadMaps : MonoBehaviour
         foreach (Dictionary<string, string> song in maps) {
             Vector3 pos = new Vector3(canvas.transform.position.x, canvas.transform.position.y, canvas.transform.position.z);
             GameObject button = Instantiate(mapButton, pos, Quaternion.identity, canvas.transform);
-            TextMeshProUGUI buttonText = button.GetComponent<TextMeshProUGUI>();
-            buttonText.text = song["Title"] + " - " + song["Version"];
+            TextMeshProUGUI songTitle = button.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI songArtist = button.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+            songTitle.text = song["Title"] + " - " + song["Version"];
+            songArtist.text = song["Artist"];
             button.GetComponent<SongButton>().data = song;
             index++;
         }

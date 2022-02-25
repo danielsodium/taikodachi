@@ -20,12 +20,12 @@ public class ImportFile : MonoBehaviour
         }
 		
 	}
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.P) && !dialoged) {
-            dialoged = true;
-            StartCoroutine( ShowLoadDialogCoroutine() );
-        }
-    }
+
+	public void showPrompt() {
+		dialoged = true;
+        StartCoroutine( ShowLoadDialogCoroutine() );
+	}
+
 
 	IEnumerator ShowLoadDialogCoroutine()
 	{

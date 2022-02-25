@@ -1,0 +1,513 @@
+fileFormatVersion: 2
+guid: 833e4dafa372419408d3292f81346ab7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4976915834291455667
+    second: tako 1_0
+  - first:
+      213: 7175759608208001739
+    second: tako 1_1
+  - first:
+      213: 1244767580276693418
+    second: tako 1_2
+  - first:
+      213: 260609381272433369
+    second: tako 1_3
+  - first:
+      213: -3248334715190506462
+    second: tako 1_4
+  - first:
+      213: -3575433112654949832
+    second: tako 1_5
+  - first:
+      213: -2155106108865794198
+    second: tako 1_6
+  - first:
+      213: -1719386445562914257
+    second: tako 1_7
+  - first:
+      213: 5160211605028581617
+    second: tako 1_8
+  - first:
+      213: -1034915983247171293
+    second: tako 1_9
+  - first:
+      213: -847817299209075887
+    second: tako 1_10
+  - first:
+      213: 6536204546911311100
+    second: tako 1_11
+  - first:
+      213: -6389980333232893346
+    second: tako 1_12
+  - first:
+      213: -8808517606788105945
+    second: tako 1_13
+  - first:
+      213: 7937190213308631406
+    second: tako 1_14
+  - first:
+      213: -7084452767046787754
+    second: takodachi_0
+  - first:
+      213: -2811338809006632260
+    second: takodachi_1
+  - first:
+      213: 6415059582509635875
+    second: takodachi_2
+  - first:
+      213: -8628460836155812790
+    second: takodachi_3
+  - first:
+      213: -4847934253038227219
+    second: takodachi_4
+  - first:
+      213: 2368539087483497617
+    second: takodachi_5
+  - first:
+      213: 6589348544492767650
+    second: takodachi_6
+  - first:
+      213: 6120951727026600322
+    second: takodachi_7
+  - first:
+      213: 1843872705252588287
+    second: takodachi_8
+  - first:
+      213: 8440816679436056501
+    second: takodachi_9
+  - first:
+      213: 1903655451824411661
+    second: takodachi_10
+  - first:
+      213: -5993274989790552712
+    second: takodachi_11
+  - first:
+      213: -9105248966149870263
+    second: takodachi_12
+  - first:
+      213: 3803688071029531339
+    second: takodachi_13
+  - first:
+      213: -5738296983465051438
+    second: takodachi_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: takodachi_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1001
+        width: 417
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d94205eb7fead90800000000000000
+      internalID: -7084452767046787754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_1
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 993
+        width: 418
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2d3e19f3e1cf8d0800000000000000
+      internalID: -2811338809006632260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_2
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 994
+        width: 450
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329d37ca3bed60950800000000000000
+      internalID: 6415059582509635875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 982
+        width: 450
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a441096c59c814880800000000000000
+      internalID: -8628460836155812790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_4
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 975
+        width: 450
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de035397b7da8bcb0800000000000000
+      internalID: -4847934253038227219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 487
+        width: 474
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ce41240cdbed020800000000000000
+      internalID: 2368539087483497617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_6
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 487
+        width: 476
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a98abfd691127b50800000000000000
+      internalID: 6589348544492767650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_7
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 485
+        width: 444
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289fbb06a2df1f450800000000000000
+      internalID: 6120951727026600322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_8
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 487
+        width: 445
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa7e97c470c69910800000000000000
+      internalID: 1843872705252588287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_9
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 493
+        width: 445
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b77aff6c0ec32570800000000000000
+      internalID: 8440816679436056501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_10
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 14
+        width: 441
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04dab42c842b6a10800000000000000
+      internalID: 1903655451824411661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_11
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 21
+        width: 443
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d1d48862c93dca0800000000000000
+      internalID: -5993274989790552712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_12
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 25
+        width: 441
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94de4259e48a3a180800000000000000
+      internalID: -9105248966149870263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_13
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 31
+        width: 418
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc22b16d52a69c430800000000000000
+      internalID: 3803688071029531339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: takodachi_14
+      rect:
+        serializedVersion: 2
+        x: 2050
+        y: 26
+        width: 419
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dabedcdb497d50b0800000000000000
+      internalID: -5738296983465051438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

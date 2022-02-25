@@ -15,7 +15,7 @@ public class SongButton : MonoBehaviour
 	}
 
 	void TaskOnClick(){
-        LoadMaps.hitsPath = data["fullPath"];
+        LoadMaps.currentSongData = data;
         StartCoroutine(GetAudioClip());
 		Debug.Log ("You have clicked the button!");
 	}

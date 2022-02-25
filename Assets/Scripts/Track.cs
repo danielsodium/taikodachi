@@ -63,7 +63,7 @@ public class Track : MonoBehaviour
     }
     void ReadMap() {
         
-        string path = LoadMaps.hitsPath;
+        string path = LoadMaps.currentSongData["fullPath"];
         string[] fileLines = File.ReadAllLines(path);
         bool times = false;
         foreach(string line in fileLines) {

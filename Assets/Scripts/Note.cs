@@ -27,7 +27,7 @@ public class Note : MonoBehaviour
         else if (!hit) {
             gameObject.transform.position = new Vector3(gameObject.transform.position.x - speed, gameObject.transform.position.y, gameObject.transform.position.z);
         } else {
-            
+            Destroy(gameObject);
         }
     }
 

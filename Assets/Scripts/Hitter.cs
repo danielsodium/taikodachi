@@ -10,6 +10,8 @@ public class Hitter : MonoBehaviour
 
     public GameObject destroyer;
     public TextMeshProUGUI score;
+    public TextMeshProUGUI version;
+    public TextMeshProUGUI songTitle;
     public float range;
     public int combo;
     public Transform dancers;
@@ -20,6 +22,8 @@ public class Hitter : MonoBehaviour
     void Start()
     {
         audioManager = FindObjectOfType<Music>();
+        songTitle.text = LoadMaps.currentSongData["Title"];
+        version.text = LoadMaps.currentSongData["Version"];
     }
 
     // Update is called once per frame
@@ -57,7 +61,10 @@ public class Hitter : MonoBehaviour
             foreach(Transform obj in flutes) {
                 obj.GetComponent<Dancer>().active = true;
             }
+        } else if (combo == 100) {
+            score.color = Color.yellow;
         }
+        score.gameObject.transform.localScale = new Vector3(score.gameObject.transform.localScale.x, 20);
         score.text = combo.ToString();
 
         // No idea why I don't have to remove the note, but if I do it returns an error as count is zero
@@ -80,6 +87,7 @@ public class Hitter : MonoBehaviour
                 obj.GetComponent<Dancer>().active = false;
             }
             score.text = combo.ToString();
+            if (score.color == Color.yellow) score.color = Color.white;
             notes.Remove(other);
         }
     }
