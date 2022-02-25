@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine.Networking;
 using TMPro;
-
+using System.IO.Compression;
 
 public class LoadMaps : MonoBehaviour
 {
@@ -22,31 +22,32 @@ public class LoadMaps : MonoBehaviour
 
     public static Dictionary<string, string> currentSongData;
 
-    public List<Dictionary<string, string>> maps = new List<Dictionary<string, string>>();
+    public List<List<Dictionary<string, string>>> maps = new List<List<Dictionary<string, string>>>();
     void Start() {
         mapsFolder = Path.Combine(Application.persistentDataPath, "maps");
         FindMaps();
     }
-
-    // Update is called once per frame
-    void Update() {
-        
-    }
-
     
 
     public void FindMaps() {
+
+        // Starter song
         if (!Directory.Exists(mapsFolder)) {
 		    Directory.CreateDirectory(mapsFolder);
+            Directory.CreateDirectory(mapsFolder + "/violet");
+            ZipFile.ExtractToDirectory(Application.streamingAssetsPath + "/violet.zip", mapsFolder + "/violet");
         }
+
         string[] songs = Directory.GetDirectories(mapsFolder);
         foreach (string song in songs) {
             string[] levels = Directory.GetFiles(song, "*.osu");
+            List<Dictionary<string, string>> mapLevels = new List<Dictionary<string, string>>();
             foreach (string level in levels) {
                 // Go through each file and find information
                 string[] fileLines = File.ReadAllLines(level);
-                readOSU(level, fileLines);
+                readOSU(level, fileLines, mapLevels);
             }
+            maps.Add(mapLevels);
 
         }
         makeButtons();
@@ -65,7 +66,7 @@ public class LoadMaps : MonoBehaviour
         }*/
     }
     
-    void readOSU(string level, string[] fileLines) {
+    void readOSU(string level, string[] fileLines, List<Dictionary<string, string>> mapLevels) {
         Dictionary<string, string> songData = new Dictionary<string, string>();
         songData.Add("fullPath", level);
         foreach (string line in fileLines) {
@@ -76,10 +77,21 @@ public class LoadMaps : MonoBehaviour
                 break;
             }
         }
-        maps.Add(songData);
+        mapLevels.Add(songData);
+        //maps.Add(songData);
     }
     
     void makeButtons() {
+        foreach (List<Dictionary<string, string>> song in maps) {
+            Vector3 pos = new Vector3(canvas.transform.position.x, canvas.transform.position.y, canvas.transform.position.z);
+            GameObject button = Instantiate(mapButton, pos, Quaternion.identity, canvas.transform);
+            TextMeshProUGUI songTitle = button.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI songArtist = button.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+            songTitle.text = song[0]["Title"];
+            songArtist.text = song[0]["Artist"];
+            button.GetComponent<SongButton>().data = song;
+        }
+        /*
         float index = 0;
         foreach (Dictionary<string, string> song in maps) {
             Vector3 pos = new Vector3(canvas.transform.position.x, canvas.transform.position.y, canvas.transform.position.z);
@@ -90,7 +102,7 @@ public class LoadMaps : MonoBehaviour
             songArtist.text = song["Artist"];
             button.GetComponent<SongButton>().data = song;
             index++;
-        }
+        }*/
     }
 
     

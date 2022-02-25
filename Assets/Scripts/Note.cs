@@ -11,7 +11,7 @@ public class Note : MonoBehaviour
     public GameObject destroyer;
     public bool hit = false;
     private Music audioManager;
-
+    private Vector3 startPos;
     private float progress = 0;
     void Start()
     {
@@ -19,8 +19,11 @@ public class Note : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (hit && progress == 0) {
+            startPos = transform.position;
+        }
         if (hit && progress <= 100) {
-            Vector2 newPos = Vector2.Lerp(hitter.transform.position, destroyer.transform.position, progress/100);
+            Vector2 newPos = Vector2.Lerp(startPos, destroyer.transform.position, progress/100);
             gameObject.transform.position = new Vector3(newPos.x, newPos.y+getArc(progress/100),gameObject.transform.position.z);
             progress += 10;
         }

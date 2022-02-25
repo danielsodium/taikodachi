@@ -7,18 +7,24 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 public class SongButton : MonoBehaviour
 {
-    public Dictionary<string, string> data;
+    public List<Dictionary<string, string>> data;
+    private MenuController menuController;
     
 	void Start () {
 		Button btn = gameObject.transform.GetComponent<Button>();
+        menuController = FindObjectOfType<MenuController>();
 		btn.onClick.AddListener(TaskOnClick);
 	}
-
+    
 	void TaskOnClick(){
+        menuController.chooseDifficulty(data);
+        
+        /*
         LoadMaps.currentSongData = data;
         StartCoroutine(GetAudioClip());
-		Debug.Log ("You have clicked the button!");
+		Debug.Log ("You have clicked the button!");*/
 	}
+    /*
     IEnumerator GetAudioClip()
     {
         string clip = Path.Combine(Directory.GetParent(data["fullPath"]).FullName, data["AudioFilename"]);
@@ -36,5 +42,5 @@ public class SongButton : MonoBehaviour
                 SceneManager.LoadScene (sceneName:"Taiko");
             }
         }
-    }
+    }*/
 }

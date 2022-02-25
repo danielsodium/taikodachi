@@ -12,10 +12,12 @@ public class Hitter : MonoBehaviour
     public TextMeshProUGUI score;
     public TextMeshProUGUI version;
     public TextMeshProUGUI songTitle;
+    public float goodRange;
     public float range;
     public int combo;
     public Transform dancers;
     public Transform flutes;
+    public GameObject hitSprite;
 
     public ParticleSystem particles;
     // Start is called before the first frame update
@@ -32,9 +34,17 @@ public class Hitter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X)) {
             hitNote();
         }
+
+        if (hitSprite.transform.localScale.x < 1) {
+            hitSprite.transform.localScale = Vector3.Lerp(hitSprite.transform.localScale, new Vector3(1, 1, hitSprite.transform.localScale.z), 0.05f);
+        }
+
     }
 
     private void hitNote() {
+
+        hitSprite.transform.localScale = new Vector3(0.8f, 0.8f, hitSprite.transform.localScale.z);
+
         if (notes.Count == 0) return;
         float dist = Mathf.Abs(notes[0].transform.position.x - gameObject.transform.position.x);
         GameObject toDestroy = notes[0].gameObject;
@@ -49,21 +59,26 @@ public class Hitter : MonoBehaviour
         //Destroy(toDestroy);
 
         if (dist < range) {
-            particles.Emit(5);
+            if (dist < goodRange) particles.Emit(5);
+            combo += 1;
+            if (score.color == Color.red) score.color = Color.white;
+            if (combo == 10) {
+                foreach(Transform obj in dancers) {
+                    obj.GetComponent<Dancer>().active = true;
+                }
+            } else if (combo == 50) {
+                foreach(Transform obj in flutes) {
+                    obj.GetComponent<Dancer>().active = true;
+                }
+            } else if (combo == 100) {
+                score.color = Color.yellow;
+            }
+        }
+        else {
+            breakCombo();
         }
 
-        combo += 1;
-        if (combo == 10) {
-            foreach(Transform obj in dancers) {
-                obj.GetComponent<Dancer>().active = true;
-            }
-        } else if (combo == 50) {
-            foreach(Transform obj in flutes) {
-                obj.GetComponent<Dancer>().active = true;
-            }
-        } else if (combo == 100) {
-            score.color = Color.yellow;
-        }
+        
         score.gameObject.transform.localScale = new Vector3(score.gameObject.transform.localScale.x, 20);
         score.text = combo.ToString();
 
@@ -79,6 +94,12 @@ public class Hitter : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other) {
         if (notes.Contains(other)) {
+            notes.Remove(other);
+            breakCombo();
+        }
+    }
+
+    private void breakCombo() {
             combo = 0;
             foreach(Transform obj in dancers) {
                 obj.GetComponent<Dancer>().active = false;
@@ -86,9 +107,7 @@ public class Hitter : MonoBehaviour
             foreach(Transform obj in flutes) {
                 obj.GetComponent<Dancer>().active = false;
             }
-            score.text = combo.ToString();
-            if (score.color == Color.yellow) score.color = Color.white;
-            notes.Remove(other);
-        }
+            score.text = "0";
+            score.color = Color.red;
     }
 }

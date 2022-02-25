@@ -14,6 +14,7 @@ public class ImportFile : MonoBehaviour
 
 	void Start()
 	{
+		FileBrowser.SetFilters( false, new FileBrowser.Filter( "OSU Maps", ".osz" ) );
         mapsFolder = Path.Combine(Application.persistentDataPath, "maps");
         if (!Directory.Exists(mapsFolder)) {
 		    Directory.CreateDirectory(mapsFolder);
@@ -33,7 +34,7 @@ public class ImportFile : MonoBehaviour
 		// Load file/folder: both, Allow multiple selection: true
 		// Initial path: default (Documents), Initial filename: empty
 		// Title: "Load File", Submit button text: "Load"
-		yield return FileBrowser.WaitForLoadDialog( FileBrowser.PickMode.FilesAndFolders, true, null, null, "Load Files and Folders", "Load" );
+		yield return FileBrowser.WaitForLoadDialog( FileBrowser.PickMode.FilesAndFolders, false, null, null, "Load OSU file", "Load" );
 
 		// Dialog is closed
 		// Print whether the user has selected some files/folders or cancelled the operation (FileBrowser.Success)
@@ -49,8 +50,6 @@ public class ImportFile : MonoBehaviour
 			// Contrary to File.ReadAllBytes, this function works on Android 10+, as well
 			byte[] bytes = FileBrowserHelpers.ReadBytesFromFile( FileBrowser.Result[0] );
 
-			// Or, copy the first file to persistentDataPath
-            Debug.Log(Application.persistentDataPath);
 
             
 

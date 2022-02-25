@@ -44,11 +44,13 @@ public class Track : MonoBehaviour
                 started = true;
             }
         } else if (!audioManager.isPlaying("song")) {
-            SceneManager.LoadScene (sceneName:"Menu");
+            goBack();
         }
     }
 
-    
+    public void goBack() {
+        SceneManager.LoadScene (sceneName:"Menu");
+    }
     
 
     void CreateNotes() {
